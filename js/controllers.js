@@ -45,4 +45,6 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+    $scope.playlistCtrl = {};
+    $stateParams.stateParams = {};
 });
