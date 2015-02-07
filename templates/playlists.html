@@ -1,7 +1,7 @@
 <ion-view view-title="Playlists">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+      <ion-item ng-repeat="playlist in playlists" ui-sref="app.playlists({playlist.id})">
         {{playlist.title}}
       </ion-item>
     </ion-list>
