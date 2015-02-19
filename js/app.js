@@ -20,7 +20,9 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($compileProvider, $stateProvider, $urlRouterProvider) {
+  $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|ghttps?|ms-appx|x-wmapp0):/) //WP8
+
   $stateProvider
 
   .state('app', {
