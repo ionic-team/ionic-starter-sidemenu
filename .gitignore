@@ -1,0 +1,34 @@
+b-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+npm-debug.log
+node_modules
+out
+bower_components
+.bowerrc
+.idea/*
+*.iml
+*.sublime-*
+projectFilesBackup
+
+.DS_Store
+
+.build
+.dist
+.tmp
+
+# Test generated files
+
+# Built asset files
+
+# Coverage reports

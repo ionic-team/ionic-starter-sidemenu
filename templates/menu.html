@@ -1,36 +1,49 @@
 <ion-side-menus enable-menu-with-back-views="false">
+
   <ion-side-menu-content>
-    <ion-nav-bar class="bar-stable">
+
+    <ion-nav-bar class="bar-dark">
+
       <ion-nav-back-button>
       </ion-nav-back-button>
 
-      <ion-nav-buttons side="left">
-        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+      <!--
+        Use primary and secondary, so buttons correctly map to the side familiar to users of each platform.
+        ion-nav-buttons must be immediate descendants of the ion-view or ion-nav-bar element
+        (basically, don't wrap it in another div).
+       -->
+      <ion-nav-buttons side="primary">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="primary">
         </button>
       </ion-nav-buttons>
+
     </ion-nav-bar>
-    <ion-nav-view name="menuContent"></ion-nav-view>
+
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+
   </ion-side-menu-content>
 
   <ion-side-menu side="left">
-    <ion-header-bar class="bar-stable">
-      <h1 class="title">Left</h1>
+    <ion-header-bar class="bar-dark">
+      <h1 class="title">Left Menu</h1>
     </ion-header-bar>
-    <ion-content>
+
+    <ion-content class="has-header">
       <ion-list>
         <ion-item menu-close ng-click="login()">
           Login
         </ion-item>
-        <ion-item menu-close href="#/app/search">
+        <ion-item menu-close ui-sref="app.search">
           Search
         </ion-item>
-        <ion-item menu-close href="#/app/browse">
+        <ion-item menu-close ui-sref="app.browse">
           Browse
         </ion-item>
-        <ion-item menu-close href="#/app/playlists">
+        <ion-item menu-close ui-sref="app.playlists">
           Playlists
         </ion-item>
       </ion-list>
     </ion-content>
   </ion-side-menu>
+
 </ion-side-menus>
